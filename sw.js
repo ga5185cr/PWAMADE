@@ -7,7 +7,9 @@
 /// キャッシュファイルの指定
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
-    '/ga5185cr.github.io/',
+    '/PWAMADE/',
+	'/PWAMADE/css/pwa.css',
+	'/PWAMADE/image/neko.png'
 ];
 
 // インストール処理
