@@ -1,7 +1,9 @@
 キャッシュ名とキャッシュファイルの指定
 
-self.addEventListener('fetch', function(event) {
-});
+// self.addEventListener('fetch', function(event) {
+// });
+self.addEventListener('fetch', (e) => {})
+
 // var CACHE_VERSION = 'v1';
 // var CACHE_NAME = 'pwa-sample-caches';
 // var urlsToCache = [
