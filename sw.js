@@ -1,35 +1,35 @@
 キャッシュ名とキャッシュファイルの指定
 
-// self.addEventListener('fetch', function(event) {
-// });
+ self.addEventListener('fetch', function(event) {
+ });
 
 
 /// キャッシュファイルの指定
-var CACHE_NAME = 'pwa-sample-caches';
-var urlsToCache = [
-    '/PWAMADE/',
-	'/PWAMADE/css/pwa.css',
-	'/PWAMADE/image/neko.png'
-];
+// var CACHE_NAME = 'pwa-sample-caches';
+// var urlsToCache = [
+//     '/PWAMADE/',
+// 	'/PWAMADE/css/pwa.css',
+// 	'/PWAMADE/image/neko.png'
+// ];
 
-// インストール処理
-self.addEventListener('install', function(event) {
-    event.waitUntil(
-        caches
-            .open(CACHE_NAME)
-            .then(function(cache) {
-                return cache.addAll(urlsToCache);
-            })
-    );
-});
+// // インストール処理
+// self.addEventListener('install', function(event) {
+//     event.waitUntil(
+//         caches
+//             .open(CACHE_NAME)
+//             .then(function(cache) {
+//                 return cache.addAll(urlsToCache);
+//             })
+//     );
+// });
 
-// リソースフェッチ時のキャッシュロード処理
-self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches
-            .match(event.request)
-            .then(function(response) {
-                return response ? response : fetch(event.request);
-            })
-    );
-});
+// // リソースフェッチ時のキャッシュロード処理
+// self.addEventListener('fetch', function(event) {
+//     event.respondWith(
+//         caches
+//             .match(event.request)
+//             .then(function(response) {
+//                 return response ? response : fetch(event.request);
+//             })
+//     );
+// });
